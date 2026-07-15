@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1-Minute Sound Symbolism Survey</title>
+  <meta name="description" content="A short anonymous survey about round- and sharp-sounding invented words.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card hero">
+      <p class="eyebrow">Japanese high school research project</p>
+      <h1>1-Minute Sound Symbolism Survey</h1>
+      <p class="lead">Invent one short string that sounds <strong>round</strong> and one that sounds <strong>sharp/angular</strong>.</p>
+      <div class="notice">
+        Judge the <strong>sound in your head</strong>, not the visual shape of the letters.
+        Please do not use an existing English word.
+      </div>
+    </section>
+
+    <form id="surveyForm" class="card" target="hidden_iframe" method="POST" novalidate>
+      <label class="check-row">
+        <input type="checkbox" id="consent" required>
+        <span>I understand that my anonymous answers may be used in a school research report or presentation.</span>
+      </label>
+
+      <fieldset>
+        <legend>Did you grow up primarily speaking English?</legend>
+        <label><input type="radio" name="english_ui" value="Yes" required> Yes</label>
+        <label><input type="radio" name="english_ui" value="No"> No</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Did you spend most of your childhood in the United States?</legend>
+        <label><input type="radio" name="us_ui" value="Yes" required> Yes</label>
+        <label><input type="radio" name="us_ui" value="No"> No</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Have you studied linguistics or phonetics?</legend>
+        <label><input type="radio" name="ling_ui" value="Yes" required> Yes</label>
+        <label><input type="radio" name="ling_ui" value="No"> No</label>
+      </fieldset>
+
+      <section>
+        <label>
+          <span class="label-title">Round-sounding string</span>
+          <span class="hint">Invent one meaningless 4–5 letter string that sounds round, soft, or smooth.</span>
+          <input id="round" class="word-input" maxlength="5" autocomplete="off" required>
+        </label>
+      </section>
+
+      <section>
+        <label>
+          <span class="label-title">Sharp/angular-sounding string</span>
+          <span class="hint">Invent one meaningless 4–5 letter string that sounds sharp, pointed, or angular.</span>
+          <input id="sharp" class="word-input" maxlength="5" autocomplete="off" required>
+        </label>
+      </section>
+
+      <div id="errorBox" class="message error" hidden></div>
+      <div id="successBox" class="message success" hidden></div>
+      <button id="submitButton" type="submit">Submit anonymous response</button>
+    </form>
+
+    <footer>No survey results are shown on this public page.</footer>
+  </main>
+
+  <iframe name="hidden_iframe" id="hidden_iframe" hidden></iframe>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

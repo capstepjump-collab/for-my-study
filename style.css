@@ -1,0 +1,32 @@
+:root{
+  --bg:#f4f6f8;--card:#fff;--text:#18222e;--muted:#667382;--border:#dbe1e7;
+  --accent:#1f5fbf;--soft:#eaf2ff;--error-bg:#fff0f0;--error-text:#8a2020;
+  --success-bg:#edf9f0;--success-text:#17622d
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+.page{width:min(780px,calc(100% - 20px));margin:20px auto 52px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:clamp(20px,4vw,36px);margin-bottom:18px;box-shadow:0 14px 36px rgba(20,32,45,.06)}
+.hero h1{margin:.18em 0 .35em;font-size:clamp(2rem,6vw,3.4rem);line-height:1.06;letter-spacing:-.035em}
+.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+.lead{font-size:1.08rem}
+.notice{background:var(--soft);border-left:4px solid var(--accent);border-radius:10px;padding:12px 14px}
+label{display:block}
+.check-row,fieldset label{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.check-row{margin-bottom:20px}
+.check-row input,fieldset input{width:auto;margin-top:.38em;flex:0 0 auto}
+fieldset{border:1px solid var(--border);border-radius:14px;padding:15px 17px;margin:16px 0}
+legend{font-weight:750;padding:0 6px}
+fieldset label{margin:8px 0}
+section{border-top:1px solid var(--border);margin-top:24px;padding-top:22px}
+.label-title{display:block;font-weight:800;font-size:1.05rem}
+.hint{display:block;color:var(--muted);font-size:.93rem;margin-top:3px}
+.word-input{width:100%;margin-top:10px;border:1px solid #bcc7d1;border-radius:12px;padding:14px 15px;font:inherit;font-size:1.25rem;letter-spacing:.07em;text-transform:lowercase}
+.word-input:focus{outline:3px solid rgba(31,95,191,.16);border-color:var(--accent)}
+button{width:100%;border:0;border-radius:13px;padding:15px 18px;background:var(--accent);color:#fff;font:inherit;font-weight:800;cursor:pointer;margin-top:8px}
+button:disabled{opacity:.6;cursor:not-allowed}
+.message{border-radius:11px;padding:13px 15px;margin:16px 0;white-space:pre-line}
+.error{background:var(--error-bg);color:var(--error-text)}
+.success{background:var(--success-bg);color:var(--success-text)}
+footer{text-align:center;color:var(--muted);padding:10px}
+@media(max-width:600px){.page{width:min(100% - 14px,780px);margin-top:7px}.card{border-radius:15px}}
